@@ -31,4 +31,12 @@ app.get("/num", (c) => {
   );
 });
 
+app.get("/api/health", (c) => {
+  const numbers = getPrimeNumbers(10);
+
+  return c.json({
+    health: "ok",
+  });
+});
+
 export default app;

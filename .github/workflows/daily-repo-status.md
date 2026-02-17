@@ -34,6 +34,8 @@ engine: claude
 # Daily Repo Status
 
 Create an upbeat daily status report for the repo as a GitHub issue.
+Analyze this repository and suggest improvements.
+Create pull requests if needed.
 
 ## What to include
 
@@ -41,9 +43,10 @@ Create an upbeat daily status report for the repo as a GitHub issue.
 - Progress tracking, goal reminders and highlights
 - Project status and recommendations
 - Actionable next steps for maintainers
+- Update README based on code changes.
 
 ## Style
-
+- Write in Japanese as much as possible.
 - Be positive, encouraging, and helpful 🌟
 - Use emojis moderately for engagement
 - Keep it concise - adjust length based on actual activity

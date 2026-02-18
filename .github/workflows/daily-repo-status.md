@@ -27,6 +27,13 @@ safe-outputs:
   create-issue:
     title-prefix: "[repo-status] "
     labels: [report, daily-status]
+  create-pull-request:
+    title-prefix: "[repo-maintenance] "
+    labels: [automation, ai]
+    draft: true
+    base-branch: "main"
+    if-no-changes: "ignore"
+    fallback-as-issue: false
 source: githubnext/agentics/workflows/daily-repo-status.md@b5a984dc86cca89e05c23f9f157117642aed6f22
 engine: claude
 ---
@@ -36,6 +43,11 @@ engine: claude
 Create an upbeat daily status report for the repo as a GitHub issue.
 Analyze this repository and suggest improvements.
 Create pull requests if needed.
+
+## PRを作るときのルール
+- READMEやドキュメント、軽微な改善など「変更が必要」なら、ブランチを切ってコミットし、PRを作成する
+- PR本文に「変更点 / 理由 / 影響範囲 / 簡単な確認方法」を短く書く
+- 変更が無いならPRは作らない（issueのレポートだけ出す）
 
 ## What to include
 
